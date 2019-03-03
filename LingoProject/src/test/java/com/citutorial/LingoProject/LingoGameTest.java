@@ -7,6 +7,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.citutorial.classes.LingoGame;
 
+import junit.framework.*;
+
 public class LingoGameTest {
 
 	ApplicationContext context;
@@ -16,11 +18,13 @@ public class LingoGameTest {
 		context=new ClassPathXmlApplicationContext("applicationContext.xml");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() {
 	//	fail("Not yet implemented");
 		LingoGame game=(LingoGame) context.getBean("myLingoGame");
-		game.StartLingoGame();
+		//game.StartLingoGame();
+		Assert.assertEquals(game.Num1(), 5);
 	}
 
 }

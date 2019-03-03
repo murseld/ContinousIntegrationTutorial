@@ -11,4 +11,7 @@ public class LingoGame {
 		System.out.println("The Lingo Game Has Started");
 		System.out.println();
 	}
+	public int Num1() {
+		return 5;
+	}
 }
